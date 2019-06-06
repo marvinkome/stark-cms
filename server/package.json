@@ -1,0 +1,19 @@
+{
+    "name": "stark-server",
+    "version": "0.0.1",
+    "main": "index.ts",
+    "repository": "https://github.com/marvinkome/stark-cms",
+    "author": "Marvin Kome",
+    "license": "MIT",
+    "scripts": {
+        "dev": "nodemon --exec ts-node -r dotenv/config index.ts"
+    },
+    "dependencies": {
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.0",
+        "typescript": "^3.5.1"
+    }
+}
