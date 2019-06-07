@@ -10,7 +10,7 @@ To get started developing locally, run the following commands:
 ```bash
 cd client
 yarn install
-yarn start
+yarn dev
 ```
 
 This runs the app in the development mode.<br>

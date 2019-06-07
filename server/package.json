@@ -6,13 +6,12 @@
     "author": "Marvin Kome",
     "license": "MIT",
     "engines": {
-        "node": "8.11.4",
-        "yarn": "1.9.4"
+        "node": "11.15.0",
+        "yarn": "1.16.0"
     },
     "scripts": {
         "build": "tsc",
-        "start": "node ./dist/index.js",
-        "postinstall": "yarn build",
+        "start": "node -r dotenv/config ./dist/index.js",
         "dev": "nodemon --exec ts-node -r dotenv/config index.ts"
     },
     "dependencies": {
