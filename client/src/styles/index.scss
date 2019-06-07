@@ -1,0 +1,79 @@
+:root {
+    /* Colors */
+    --primary-color: #fc5c65;
+    --secondary-color: #8a5fb2;
+    --primary-blue: #6c63ff;
+    --text-color: #3f3d56;
+    --fade-blue: #d4dfec;
+
+    /* Works Card */
+    --middle-w-card-bg: linear-gradient(180deg, #2c2c54 0%, #fc5c65 100%);
+    --default-w-card-bg: linear-gradient(179.22deg, #2c2c54 0.48%, #fc5c65 126.66%);
+
+    /* Box Shadows */
+    --cntact-btn-shadow: 0px 10px 30px rgba(252, 92, 101, 0.59);
+    --services-card-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    --works-card-shadow: 0px 4px 50px rgba(0, 0, 0, 0.3);
+
+    /* background reset */
+    --bg-no-repeat: no-repeat;
+    --bg-center-X-Y: center center;
+    --bg-cover: cover;
+    --bg-contain: contain;
+
+    /* Grid Theming */
+    --g-temp-col-2: repeat(2, 1fr);
+    --g-temp-col-3: repeat(3, 1fr);
+    --g-temp-col-4: repeat(4, 1fr);
+
+    /* Padding */
+    --X-Y-padding: 10px 15px;
+    --Z-padding: 1em;
+    --padding-l-r: 0 1em 0 1em;
+
+    /* Border radius */
+    --br-5px: 5px;
+    --br-10px: 10px;
+    --br-50px: 50px;
+    --br-50pc: 50%;
+    --br-tl-tr: 40px 40px 0px 0px;
+    --contact-br: 10px 10px 50px 10px;
+
+    /* Button Styles */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fff;
+    color: #111;
+    position: relative;
+    line-height: 2;
+    font-weight: 400;
+    overflow-x: hidden;
+    font-size: calc(14px + 0.25vw);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
