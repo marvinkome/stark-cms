@@ -17,7 +17,7 @@
     "prod-client": "cd client && yarn start",
 
     "dev-server": "cd server && yarn dev",
-    "dev-client": "cd client && yarn dev",
+    "dev-client": "cd client && yarn start",
 
     "start": "yarn prod-server",
     "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn dev-client\"",
