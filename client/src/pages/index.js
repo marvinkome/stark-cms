@@ -4,6 +4,7 @@ import '../styles/App.scss';
 
 // Routes
 import Login from './login';
+import DashBoard from './dashboard';
 
 export default class App extends React.Component {
     render() {
@@ -12,7 +13,7 @@ export default class App extends React.Component {
                 <div className="App">
                     <Switch>
                         <Route exact path="/" component={Login} />
-                        {/* <Route path="/dashboard" component={DashBoard} /> */}
+                        <Route path="/dashboard" component={DashBoard} />
                     </Switch>
                 </div>
             </BrowserRouter>
