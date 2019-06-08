@@ -3,5 +3,6 @@
     "tabWidth": 4,
     "singleQuote": true,
     "arrowParens": "always",
-    "semi": true
+    "semi": true,
+    "endOfLine": "lf"
 }
