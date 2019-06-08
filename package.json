@@ -22,7 +22,7 @@
     "start": "yarn prod-server",
     "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn dev-client\"",
 
-    "heroku-postbuild": "concurrently --kill-others-on-fail \"yarn build-client\" \"yarn build-server\""
+    "heroku-postbuild": "yarn cache clean && concurrently --kill-others-on-fail \"yarn build-client\" \"yarn build-server\""
   },
   "dependencies": {
     "concurrently": "^4.1.0"
