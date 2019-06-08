@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import formBCG from '../../images/form_bg_vector.svg';
 import { Link } from 'react-router-dom';
 
 export default class LoginForm extends Component {
@@ -10,12 +9,13 @@ export default class LoginForm extends Component {
     render() {
         return (
             <div className="login--bg">
-                <div style={formBG} />
+                <div className="form-bg" />
+
                 <form className="login--form" onSubmit={this.handleSubmit}>
                     <label htmlFor="text" className="--label">
                         Username or Email Address
                     </label>
-                    <input className="--input" type="text" id="text" required autoComplete />
+                    <input className="--input" type="text" id="text" required />
 
                     <label htmlFor="psword" className="--label">
                         Password
@@ -23,16 +23,7 @@ export default class LoginForm extends Component {
                     <input className="--input" type="password" id="psword" required />
 
                     <label className="checkbox--container">
-                        <p
-                            style={{
-                                fontSize: '0.7em',
-                                position: 'relative',
-                                bottom: '5px',
-                                color: '#706E6E'
-                            }}
-                        >
-                            Remember me
-                        </p>
+                        <p className="checkbox--container--title">Remember me</p>
                         <input className="--checkbox" type="checkbox" />
                         <span className="custom--checkmark" />
                     </label>
@@ -54,17 +45,3 @@ export default class LoginForm extends Component {
         );
     }
 }
-
-const formBG = {
-    width: '100%',
-    height: '500px',
-    backgroundImage: `url(${formBCG})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    position: 'absolute',
-    top: '20vh',
-    left: '0',
-    opacity: '.4',
-    zIndex: '-2'
-};

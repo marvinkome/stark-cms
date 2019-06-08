@@ -41,4 +41,9 @@ The root styles folder will contain all mixins and variables, and can be importe
 
 Reference: [Adding a sass stylesheets](https://facebook.github.io/create-react-app/docs/adding-a-sass-stylesheet)
 
+### Assets
+
+The root folder will container `assets` folder which will contain all images and files used in
+mulitple components
+
 ## TODO - Add more documentation
