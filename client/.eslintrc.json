@@ -21,6 +21,7 @@
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
         "react/jsx-uses-vars": ["error"],
+        "react/prop-types": ["off"],
         "max-len": [
             "error",
             {

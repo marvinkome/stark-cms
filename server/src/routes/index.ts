@@ -31,6 +31,19 @@ router.get('/', auth.optional, (req, res) => {
     });
 });
 
+router.get('/my-profile', auth.required, async (req, res) => {
+    // @ts-ignore
+    const { id } = req.payload;
+
+    const user = await User.findById(id);
+
+    if (!user) {
+        res.sendStatus(400);
+    }
+
+    res.send({ user });
+});
+
 router.post('/register', auth.optional, async (req, res) => {
     const data = req.body;
 

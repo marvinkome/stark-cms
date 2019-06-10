@@ -1,9 +1,26 @@
 import React from 'react';
+import { inject } from 'mobx-react';
+import logo from 'images/logo.svg';
+import { authApi } from 'lib/api';
+import { AUTH_TOKEN_KEY } from 'lib/keys';
+
 import LoginForm from './components/loginForm';
-import logo from '../../images/logo.svg';
 import './login.scss';
 
-export default class Login extends React.Component {
+class Login extends React.Component {
+    loginUser = async (userData) => {
+        const { data } = await authApi.login(userData);
+
+        // set token on localstorage
+        localStorage.setItem(AUTH_TOKEN_KEY, data.token);
+
+        // add user profile to store
+        this.props.setProfile(data.user);
+
+        // redirect to dashboard
+        this.props.history.push('/admin');
+    };
+
     render() {
         return (
             <div className="login__container">
@@ -15,9 +32,16 @@ export default class Login extends React.Component {
                     </span>
 
                     {/* form */}
-                    <LoginForm />
+                    <LoginForm login={this.loginUser} />
                 </div>
             </div>
         );
     }
 }
+
+const mapStateToProps = ({ rootStore }) => {
+    return {
+        setProfile: rootStore.userStore.updateProfile
+    };
+};
+export default inject(mapStateToProps)(Login);

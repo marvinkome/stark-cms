@@ -1,22 +1,38 @@
 import React from 'react';
+import { Provider } from 'mobx-react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+
+// styles
+import 'react-toastify/dist/ReactToastify.css';
 import '../styles/App.scss';
 
 // Routes
 import Login from './login';
-import DashBoard from './dashboard';
+import Admin from './admin';
+import MainSite from './site';
+
+// global components
+import Loader from '../components/loader';
+import store from 'store';
 
 export default class App extends React.Component {
     render() {
         return (
-            <BrowserRouter>
-                <div className="App">
-                    <Switch>
-                        <Route exact path="/" component={Login} />
-                        <Route path="/dashboard" component={DashBoard} />
-                    </Switch>
-                </div>
-            </BrowserRouter>
+            <Provider rootStore={store}>
+                <BrowserRouter>
+                    <div className="App">
+                        <Switch>
+                            <Route path="/login" component={Login} />
+                            <Route path="/admin" component={Admin} />
+                            <Route path="/" component={MainSite} />
+                        </Switch>
+
+                        <Loader />
+                        <ToastContainer />
+                    </div>
+                </BrowserRouter>
+            </Provider>
         );
     }
 }

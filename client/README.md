@@ -46,4 +46,14 @@ Reference: [Adding a sass stylesheets](https://facebook.github.io/create-react-a
 The root folder will container `assets` folder which will contain all images and files used in
 mulitple components
 
+## Page route structure
+
+The `pages/index.js` file contains the top level routes. This includes;
+
+-   `/login` - the login page for the dashboard and the main site
+-   `/admin` - the main wrapper for the dashboard this page has it sub-views;
+    -   `/` - this renders the dashboard page
+    -   `/posts` - this renders the posts pages
+-   `/` - this page is for the main site. This page will be used to render the main website
+
 ## TODO - Add more documentation
