@@ -1,13 +1,18 @@
-import { observable, action } from 'mobx';
+import { observable, action, decorate } from 'mobx';
 
-export default class UserStore {
-    profile = observable.box(null);
+class UserStore {
+    profile = null;
 
     constructor(root) {
         this.root = root;
     }
 
-    updateProfile = action('updateProfile', (profile) => {
+    updateProfile = (profile) => {
         this.profile = profile;
-    });
+    };
 }
+
+export default decorate(UserStore, {
+    profile: observable,
+    updateProfile: action
+});

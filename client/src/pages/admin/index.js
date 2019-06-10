@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { inject } from 'mobx-react';
 
 class Admin extends Component {
-    componentDidMount = async () => {
+    async componentDidMount() {
         const auth_message = 'Authentication key not found. Redirecting to login';
         try {
             // get token
@@ -23,7 +23,7 @@ class Admin extends Component {
             const { data } = await authApi.userProfile();
 
             // set user data
-            await this.props.setProfile(data.user);
+            this.props.setProfile(data.user);
         } catch (e) {
             // If there's an auth error then redirect user back to login
             if (e.message === auth_message || (e.response && e.response.status === 401)) {
@@ -33,7 +33,7 @@ class Admin extends Component {
                 console.error(e); // eslint-disable-line
             }
         }
-    };
+    }
 
     render() {
         const profile = this.props.profile;
