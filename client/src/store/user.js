@@ -7,7 +7,7 @@ export default class UserStore {
         this.root = root;
     }
 
-    updateProfile = action((profile) => {
+    updateProfile = action('updateProfile', (profile) => {
         this.profile = profile;
     });
 }

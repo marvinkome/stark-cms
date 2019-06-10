@@ -21,7 +21,9 @@ class Admin extends Component {
 
             // fetch profile
             const { data } = await authApi.userProfile();
-            this.props.updateProfile(data.user);
+
+            // set user data
+            await this.props.setProfile(data.user);
         } catch (e) {
             // If there's an auth error then redirect user back to login
             if (e.message === auth_message || (e.response && e.response.status === 401)) {
@@ -33,26 +35,14 @@ class Admin extends Component {
         }
     };
 
-    componentDidUpdate() {
-        console.log('Updating');
-    }
-
-    onbtnClick = () => {
-        this.props.updateProfile({
-            username: 'test',
-            email: 'test@test.com'
-        });
-    };
-
     render() {
         const profile = this.props.profile;
+
         return (
             <div>
                 <h1 style={{ textAlign: 'center' }}>
                     Hello {profile ? profile.username : ''}, Welcome to your Dashboard
                 </h1>
-
-                <button onClick={this.onbtnClick}>Update profile</button>
 
                 <Switch>
                     <Route exact path="/admin" render={() => <p>dashboard page</p>} />
@@ -67,7 +57,7 @@ class Admin extends Component {
 const mapStateToProps = ({ rootStore }) => {
     const { updateProfile, profile } = rootStore.userStore;
     return {
-        updateProfile,
+        setProfile: updateProfile,
         profile
     };
 };
