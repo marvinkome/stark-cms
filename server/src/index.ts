@@ -7,7 +7,10 @@ import schema from './graphql';
 import { setup_auth } from './libs/auth';
 import routes from './routes';
 
-const apolloServer = new ApolloServer({ schema });
+const apolloServer = new ApolloServer({
+    typeDefs: schema.typeDefs,
+    resolvers: schema.resolvers
+});
 
 export default function createApp() {
     const app = express();
