@@ -5,6 +5,10 @@ import { mainClient, authApi } from 'lib/api';
 import { toast } from 'react-toastify';
 import { inject } from 'mobx-react';
 
+// pages
+import Dashboard from './dashboard';
+import Post from './posts';
+
 class Admin extends Component {
     async componentDidMount() {
         const auth_message = 'Authentication key not found. Redirecting to login';
@@ -36,17 +40,11 @@ class Admin extends Component {
     }
 
     render() {
-        const profile = this.props.profile;
-
         return (
             <div>
-                <h1 style={{ textAlign: 'center' }}>
-                    Hello {profile ? profile.username : ''}, Welcome to your Dashboard
-                </h1>
-
                 <Switch>
-                    <Route exact path="/admin" render={() => <p>dashboard page</p>} />
-                    <Route exact path="/admin/posts" render={() => <p>posts page</p>} />
+                    <Route exact path="/admin" component={Dashboard} />
+                    <Route exact path="/admin/posts" component={Post} />
                     <Route path="*" render={() => <p>404 page</p>} />
                 </Switch>
             </div>
@@ -55,10 +53,9 @@ class Admin extends Component {
 }
 
 const mapStateToProps = ({ rootStore }) => {
-    const { updateProfile, profile } = rootStore.userStore;
+    const { updateProfile } = rootStore.userStore;
     return {
-        setProfile: updateProfile,
-        profile
+        setProfile: updateProfile
     };
 };
 export default inject(mapStateToProps)(Admin);
