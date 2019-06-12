@@ -5,10 +5,6 @@
     "repository": "https://github.com/marvinkome/stark-cms",
     "author": "Marvin Kome",
     "license": "MIT",
-    "engines": {
-        "node": "11.15.0",
-        "yarn": "1.16.0"
-    },
     "scripts": {
         "build": "tsc",
         "start": "node -r dotenv/config ./dist/index.js",
