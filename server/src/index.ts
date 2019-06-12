@@ -3,13 +3,12 @@ import { ApolloServer } from 'apollo-server-express';
 import { connect } from 'mongoose';
 import bodyParser from 'body-parser';
 
-import schema from './graphql';
+import schema from './gql';
 import { setup_auth } from './libs/auth';
 import routes from './routes';
 
 const apolloServer = new ApolloServer({
-    typeDefs: schema.typeDefs,
-    resolvers: schema.resolvers
+    schema
 });
 
 export default function createApp() {
