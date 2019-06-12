@@ -1,7 +1,14 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, Document } from 'mongoose';
 import { hash, compare } from 'bcrypt';
 
-export const userSchema = new Schema({
+export interface IUser extends Document {
+    email: string;
+    username: string;
+    password: string;
+    verify_password: (password: string) => Promise<boolean>;
+}
+
+export const userSchema: Schema<IUser> = new Schema({
     username: {
         type: String,
         unique: true,
@@ -37,4 +44,4 @@ userSchema.methods.verify_password = function(password: string) {
     return compare(password, this.password);
 };
 
-export default model('User', userSchema);
+export default model<IUser>('User', userSchema);

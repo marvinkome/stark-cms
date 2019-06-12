@@ -7,7 +7,7 @@
         "sourceMap": true,
         "strict": true,
         "outDir": "./dist",
-        "baseUrl": "./lib",
+        "baseUrl": "./src",
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,

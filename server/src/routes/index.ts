@@ -2,14 +2,13 @@ import { Router } from 'express';
 import jwt from 'jsonwebtoken';
 import passport from 'passport';
 
-import User from '../models/users';
+import User, { IUser } from '../models/users';
 import auth from '../libs/auth';
-import { userSchema } from '../interfaces/models/user';
 
 const router = Router();
 
 // services
-function generateJWT(user: userSchema) {
+function generateJWT(user: IUser) {
     const today = new Date();
     const expirationDate = new Date(today);
     expirationDate.setDate(today.getDate() + 60);
@@ -48,8 +47,7 @@ router.post('/register', auth.optional, async (req, res) => {
     const data = req.body;
 
     try {
-        // @ts-ignore
-        const user: userSchema = new User({
+        const user = new User({
             username: data.username,
             email: data.email,
             password: data.password
@@ -73,7 +71,7 @@ router.post('/login', auth.optional, (req, res, next) => {
     return passport.authenticate(
         'local',
         { session: false },
-        (err, user: userSchema, info) => {
+        (err, user: IUser, info) => {
             if (err) {
                 return next(err);
             }
