@@ -6,8 +6,8 @@
   "author": "Marvin Kome <marvinkome@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "11.15.0",
-    "yarn": "1.16.0"
+    "node": ">=10",
+    "yarn": ">=1.13.0"
   },
   "scripts": {
     "build-server": "cd server && yarn install --network-concurrency 1 && yarn build",
