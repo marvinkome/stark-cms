@@ -5,7 +5,9 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <Layout>
-                <p>Dashboard</p>
+                <div className="db__test--content">
+                    <p>Dashboard</p>
+                </div>
             </Layout>
         );
     }

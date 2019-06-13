@@ -6,10 +6,10 @@ import Topbar from '../topbar';
 export default class Layout extends React.Component {
     render() {
         return (
-            <div>
+            <div className="db__container">
                 <Topbar />
                 <Sidebar />
-                {this.props.children}
+                <div className="db__main">{this.props.children}</div>
             </div>
         );
     }

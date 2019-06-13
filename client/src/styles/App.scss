@@ -16,3 +16,44 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+// ***  Dashboard Layout *** //
+.db__container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+        'sidebar header'
+        'sidebar main'
+        'sidebar main';
+    height: 100vh;
+
+    .db__header {
+        grid-area: header;
+        background: #079992;
+        color: #fff;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.11);
+        position: relative;
+        z-index: 4;
+    }
+
+    .db__sidebar {
+        grid-area: sidebar;
+        background: #ffffff;
+        box-shadow: 3px 0px 50px rgba(0, 0, 0, 0.11);
+    }
+
+    .db__main {
+        grid-area: main;
+        padding: 32px 24px;
+    }
+}
+
+.db__test--content {
+    height: 15vh;
+    padding: 32px 24px;
+    background: #ffffff;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 5vh;
+}
