@@ -30,9 +30,9 @@ a {
 
     .db__header {
         grid-area: header;
-        background: #079992;
+        background: var(--primary-color);
         color: #fff;
-        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.11);
+        box-shadow: var(--header-shadow);
         position: relative;
         z-index: 4;
     }
@@ -40,7 +40,7 @@ a {
     .db__sidebar {
         grid-area: sidebar;
         background: #ffffff;
-        box-shadow: 3px 0px 50px rgba(0, 0, 0, 0.11);
+        box-shadow: var(--sideBar-shadow);
     }
 
     .db__main {

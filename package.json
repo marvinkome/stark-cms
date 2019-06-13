@@ -5,13 +5,6 @@
   "repository": "git@github.com:marvinkome/stark-cms.git",
   "author": "Marvin Kome <marvinkome@gmail.com>",
   "license": "MIT",
-<<<<<<< HEAD
-=======
-  "engines": {
-    "node": ">=10",
-    "yarn": ">=1.13.0"
-  },
->>>>>>> 0b00a3e6894fb47a4a7655f771691f739ff0f8ac
   "scripts": {
     "build-server": "cd server && yarn install --network-concurrency 1 && yarn build",
     "build-client": "cd client && yarn install --network-concurrency 1 && yarn build",
