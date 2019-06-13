@@ -5,23 +5,15 @@
   "repository": "git@github.com:marvinkome/stark-cms.git",
   "author": "Marvin Kome <marvinkome@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": "11.15.0",
-    "yarn": "1.16.0"
-  },
   "scripts": {
     "build-server": "cd server && yarn install --network-concurrency 1 && yarn build",
     "build-client": "cd client && yarn install --network-concurrency 1 && yarn build",
-
     "prod-server": "cd server && yarn start",
     "prod-client": "cd client && yarn start",
-
     "dev-server": "cd server && yarn dev",
     "dev-client": "cd client && yarn start",
-
     "start": "yarn prod-server",
     "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn dev-client\"",
-
     "heroku-postbuild": "yarn cache clean && concurrently --kill-others-on-fail \"yarn build-client\" \"yarn build-server\""
   },
   "dependencies": {
