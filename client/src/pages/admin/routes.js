@@ -17,12 +17,12 @@ const routes = [
         icon: <MdAvTimer className="icon" />,
         children: [
             {
-                name: 'Home',
+                title: 'Home',
                 path: '/admin',
                 component: Dashboard
             },
             {
-                name: 'Posts',
+                title: 'Posts',
                 path: '/admin',
                 component: Dashboard
             }
@@ -33,7 +33,7 @@ const routes = [
         icon: <MdLibraryBooks className="icon" />,
         children: [
             {
-                name: 'Create Posts',
+                title: 'Create Posts',
                 path: '/admin/posts',
                 component: Post
             }
@@ -44,7 +44,7 @@ const routes = [
         icon: <MdAccountCircle className="icon" />,
         children: [
             {
-                name: 'Admin',
+                title: 'Admin',
                 path: '/admin/users',
                 component: Dashboard
             }
@@ -55,7 +55,7 @@ const routes = [
         icon: <MdGraphicEq className="icon" />,
         children: [
             {
-                name: 'General',
+                title: 'General',
                 path: '/admin/users',
                 component: Dashboard
             }
