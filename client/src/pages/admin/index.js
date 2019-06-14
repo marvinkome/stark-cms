@@ -5,9 +5,7 @@ import { mainClient, authApi } from 'lib/api';
 import { toast } from 'react-toastify';
 import { inject } from 'mobx-react';
 
-// pages
-import Dashboard from './dashboard';
-import Post from './posts';
+import { routerPaths } from './routes';
 
 class Admin extends Component {
     async componentDidMount() {
@@ -43,8 +41,9 @@ class Admin extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/admin" component={Dashboard} />
-                    <Route exact path="/admin/posts" component={Post} />
+                    {routerPaths.map((routes, index) => (
+                        <Route key={index} exact path={routes.path} component={routes.component} />
+                    ))}
                     <Route path="*" render={() => <p>404 page</p>} />
                 </Switch>
             </div>
