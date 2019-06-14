@@ -1,50 +1,27 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Toggle from 'components/ToggleComponent';
 
 export default class SidebarRoutes extends Component {
-    renderSubMenu = (menus) => {
-        return menus.map((item) => {
+    render() {
+        const { contents } = this.props;
+        const SidebarContents = contents.map((item) => {
             return (
-                <div className="item--c" key={item.id}>
-                    <hr />
-                    {item.icon}
-                    {item.path ? (
-                        <Link to={item.path}>
-                            <h3>{item.name}</h3>
-                        </Link>
-                    ) : (
-                        <h3>{item.name}</h3>
-                    )}
-                    <hr />
+                <div>
+                    <Toggle>
+                        {({ on, toggle }) => (
+                            <div>
+                                <span className="sidebar__title">
+                                    {item.icon}
+                                    <h3 onClick={toggle}>{item.title}</h3>
+                                </span>
+                                {on && <p className="item">Item here</p>}
+                            </div>
+                        )}
+                    </Toggle>
                 </div>
             );
         });
-    };
-
-    render() {
-        const { contents } = this.props;
-
-        return (
-            <div className="sb__c">
-                {/* map through each route and render */}
-                {contents.map((item) => {
-                    return (
-                        <div className="item--c" key={item.id}>
-                            {item.icon}
-                            {item.path ? (
-                                <Link to={item.path}>
-                                    <h3>{item.name}</h3>
-                                </Link>
-                            ) : (
-                                <h3>{item.name}</h3>
-                            )}
-
-                            {/* check if it has sub routes the render those too */}
-                            {item.children && this.renderSubMenu(item.children)}
-                        </div>
-                    );
-                })}
-            </div>
-        );
+        return <div>{SidebarContents}</div>;
     }
 }

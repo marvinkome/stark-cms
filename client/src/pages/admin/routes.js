@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import the icons you want to use for the route
-import { MdAvTimer } from 'react-icons/md';
+import { MdAvTimer, MdLibraryBooks, MdAccountCircle, MdGraphicEq } from 'react-icons/md';
 
 // pages
 import Dashboard from './dashboard';
@@ -13,20 +13,53 @@ import Post from './posts';
  */
 const routes = [
     {
-        name: 'Dashboard',
-        icon: <MdAvTimer />,
+        title: 'Dashboard',
+        icon: <MdAvTimer className="icon" />,
         children: [
             {
                 name: 'Home',
+                path: '/admin',
+                component: Dashboard
+            },
+            {
+                name: 'Posts',
                 path: '/admin',
                 component: Dashboard
             }
         ]
     },
     {
-        name: 'Posts',
-        path: '/admin/posts',
-        component: Post
+        title: 'Posts',
+        icon: <MdLibraryBooks className="icon" />,
+        children: [
+            {
+                name: 'Create Posts',
+                path: '/admin/posts',
+                component: Post
+            }
+        ]
+    },
+    {
+        title: 'Users',
+        icon: <MdAccountCircle className="icon" />,
+        children: [
+            {
+                name: 'Admin',
+                path: '/admin/users',
+                component: Dashboard
+            }
+        ]
+    },
+    {
+        title: 'Settings',
+        icon: <MdGraphicEq className="icon" />,
+        children: [
+            {
+                name: 'General',
+                path: '/admin/users',
+                component: Dashboard
+            }
+        ]
     }
 ];
 
