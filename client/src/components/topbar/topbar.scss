@@ -1,0 +1,59 @@
+.db__header {
+    grid-area: header;
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: var(--header-shadow);
+    position: relative;
+    z-index: 4;
+
+    .header-links {
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-content: center;
+
+        .inner-content {
+            background: var(--light-primary);
+            width: 60%;
+            margin-left: 10%;
+            display: flex;
+            padding: 0 15px;
+            justify-content: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                color: #fff;
+                padding-inline-end: 4rem;
+            }
+        }
+
+        .notif-content {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+
+            .notif-box {
+                color: inherit;
+                position: relative;
+
+                .notif-icon {
+                    background: #d51919;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 1rem;
+                    top: 0rem;
+                }
+            }
+
+            .profile-link {
+                color: inherit;
+                font-size: 15px;
+                padding-inline-end: 1rem;
+            }
+        }
+    }
+}

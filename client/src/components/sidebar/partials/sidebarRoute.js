@@ -65,7 +65,7 @@ class SidebarRoute extends React.Component {
                 ) : (
                     item.children && (
                         <a
-                            href="#"
+                            href="/"
                             className={classnames('sidebar__title', {
                                 active
                             })}

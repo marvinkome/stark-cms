@@ -41,15 +41,6 @@ a {
             'main main';
     }
 
-    .db__header {
-        grid-area: header;
-        background: var(--primary-color);
-        color: #fff;
-        box-shadow: var(--header-shadow);
-        position: relative;
-        z-index: 4;
-    }
-
     .db__main {
         grid-area: main;
         padding: 32px 24px;
