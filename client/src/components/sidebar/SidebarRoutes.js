@@ -5,7 +5,7 @@ import Toggle from 'components/ToggleComponent';
 export default class SidebarRoutes extends Component {
     renderChilren = (items) => {
         return items.map((item, index) => (
-            <div key={index}>
+            <div className="item" key={index}>
                 <span className="sidebar__title">
                     {item.icon}
                     {item.path && (

@@ -1,0 +1,39 @@
+.headerLinks {
+    color: #fff;
+    background: var(--light-primary);
+    width: 50vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    & a {
+        color: #fff;
+        padding-inline-end: 4rem;
+    }
+}
+.innerContent {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.not {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    // padding-inline-end: 1rem;
+}
+
+.notification {
+    background: #d51919;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    position: relative;
+    right: 1rem;
+    bottom: 0.5rem;
+}

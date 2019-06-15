@@ -9,6 +9,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--text-color);
 }
 
 .center--wrapper {
@@ -59,7 +60,7 @@ a {
         }
 
         & img {
-            margin: 1rem 0 4rem 0;
+            margin: 1rem 0 3rem 0;
         }
     }
 
@@ -84,6 +85,7 @@ a {
     margin-top: 2rem;
     cursor: pointer;
     width: 100%;
+    user-select: none;
 
     &:focus {
         background: var(--primary-color);
