@@ -22,8 +22,8 @@ const routes = [
                 component: Dashboard
             },
             {
-                title: 'Posts',
-                path: '/admin',
+                title: 'Updates',
+                path: '/admin/updates',
                 component: Dashboard
             }
         ]
@@ -56,7 +56,7 @@ const routes = [
         children: [
             {
                 title: 'General',
-                path: '/admin/users',
+                path: '/admin/settings',
                 component: Dashboard
             }
         ]

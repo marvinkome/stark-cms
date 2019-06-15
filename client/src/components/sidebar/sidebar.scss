@@ -1,0 +1,56 @@
+@import 'styles/_reset.scss';
+
+.db__sidebar {
+    grid-area: sidebar;
+    background: #ffffff;
+    box-shadow: var(--sideBar-shadow);
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // padding: var(--padding-l-r);
+    // align-items: center;
+
+    @include for-phone-only {
+        display: none;
+    }
+
+    .logo {
+        align-self: center;
+
+        img {
+            margin: 1rem 0 3rem 0;
+        }
+    }
+
+    .sidebar__title {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+        user-select: none;
+        padding: 12px 15%;
+        padding-right: 1%;
+        font-size: 17px;
+        font-weight: bold;
+        color: var(--dark-secondary);
+
+        &.active {
+            padding: 10px 15%;
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        & ~ .item a {
+            display: block;
+            padding: 4px;
+            padding-left: 3.6rem;
+            background-color: #f6f5f5;
+            font-size: 16px;
+
+            &.active {
+                font-weight: 500;
+                color: var(--dark-secondary);
+            }
+        }
+    }
+}
