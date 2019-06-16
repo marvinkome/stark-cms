@@ -1,5 +1,11 @@
+@import 'styles/_reset.scss';
+
 .db__dashboard {
     margin: 15px 25px;
+
+    @include for-phone-only {
+        margin: 5px 10px;
+    }
 
     .welcome-card {
         position: relative;
@@ -43,10 +49,16 @@
     .flex-container {
         display: flex;
         margin-top: 2%;
+        flex-wrap: wrap;
 
         .first-col {
             flex: 3;
             margin-right: 25px;
+
+            @include for-phone-only {
+                margin-right: 0px;
+                flex-basis: 100%;
+            }
 
             .glance {
                 font-size: 15px;
