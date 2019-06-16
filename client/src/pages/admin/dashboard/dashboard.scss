@@ -1,0 +1,144 @@
+.db__dashboard {
+    margin: 15px 25px;
+
+    .welcome-card {
+        position: relative;
+        padding: 24px;
+        background: #ffffff;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 5px 5px 0px 0px;
+        margin-top: 15px;
+
+        .title {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-color);
+        }
+
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #d51919;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                font-size: 13px;
+                color: #fff;
+                margin-inline-end: unset;
+            }
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        margin-top: 2%;
+
+        .first-col {
+            flex: 3;
+            margin-right: 25px;
+
+            .glance {
+                font-size: 15px;
+
+                a {
+                    display: block;
+                }
+
+                p {
+                    font-weight: 500;
+                }
+            }
+
+            .activity {
+                padding: 7px 0px;
+                border-bottom: 1px solid hsl(0, 0%, 95%);
+
+                p {
+                    color: var(--text-color);
+                }
+
+                &.post {
+                    p {
+                        font-size: 14px;
+
+                        a {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                &.comment {
+                    .comment_author {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+
+                    .comment {
+                        font-size: 15px;
+                        overflow: hidden;
+                        position: relative;
+                        line-height: 1.2em;
+                        max-height: 2.4em;
+                        text-align: justify;
+                        padding-right: 1em;
+
+                        &:before {
+                            content: '....';
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            width: 1em;
+                            height: 1em;
+                            margin-top: 0.2em;
+                            background: inherit;
+                        }
+                    }
+                }
+            }
+        }
+
+        .second-col {
+            flex: 2;
+
+            .draft {
+                input,
+                textarea {
+                    width: 100%;
+                    font-size: 15px;
+                    padding: 7px;
+                    margin: 10px 0px;
+                    border: 1px solid var(--primary-color);
+                    border-radius: 1px;
+
+                    &:focus {
+                        outline: none;
+                        border-width: 2px;
+                    }
+                }
+
+                .btn {
+                    padding: 10px 20px;
+                    font-size: 15px;
+                    background: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
