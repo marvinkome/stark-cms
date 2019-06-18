@@ -4,6 +4,8 @@
     "private": true,
     "proxy": "http://localhost:5000",
     "dependencies": {
+        "@editorjs/editorjs": "^2.14.0",
+        "@editorjs/header": "^2.2.4",
         "@stfy/react-editor.js": "^0.1.5",
         "axios": "^0.19.0",
         "classnames": "^2.2.6",

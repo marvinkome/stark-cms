@@ -35,7 +35,7 @@ export default class LoginForm extends Component {
                     </label> */}
 
                     <div className="center--wrapper">
-                        <button className="btn primary--btn" type="submit">
+                        <button className="btn btn-lg primary--btn" type="submit">
                             Log In
                         </button>
 

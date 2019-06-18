@@ -932,7 +932,7 @@
   resolved "https://registry.yarnpkg.com/@editorjs/delimiter/-/delimiter-1.1.0.tgz#f61808ea92e4e289607d54441964f1cb8605410a"
   integrity sha512-0G36vEvvb94g6nu/qs2rVjC/qjxLnY20OfOgxROKSOOXzS7xnkTij5raeIxRiYueeLL5fMrzrvtFH7wclfxF+g==
 
-"@editorjs/editorjs@^2.12.4":
+"@editorjs/editorjs@^2.12.4", "@editorjs/editorjs@^2.14.0":
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/@editorjs/editorjs/-/editorjs-2.14.0.tgz#5f2783b92c675cb2afb223920dc3fdbc6ce96cfb"
   integrity sha512-pVqKk86D98xA91GvSJSyOXLVB0V9bT+vgYF2kT3Ls5EDzrh44uh+JRKZF4wqR6XobOMOvRMZI3GyK1QRK4Yvlw==
@@ -944,7 +944,7 @@
   resolved "https://registry.yarnpkg.com/@editorjs/embed/-/embed-2.2.1.tgz#90dbcac6e163d20c665fcc1a218d4ba1db80e2f1"
   integrity sha512-jjhgJf+LkYr8UfsQPavfukCq0+SIkz1MD8vmWkN29uU2zItWsScmfRis3YoLZJ7Rrz+yDeS8GyUjxTg2iQa0Vg==
 
-"@editorjs/header@^2.2.3":
+"@editorjs/header@^2.2.3", "@editorjs/header@^2.2.4":
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/@editorjs/header/-/header-2.2.4.tgz#3bc25154f385eb7df0682e1743a31be9347af285"
   integrity sha512-S9Icx2DIrLFw/0P3wUme/40/lJvdJjexcOoJCCThU86Dg9vrFcdvt5ImMWcbvjCRr2uauZbMQRNdf5/Uce2pBQ==

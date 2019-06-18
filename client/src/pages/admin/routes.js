@@ -5,7 +5,8 @@ import { MdAvTimer, MdLibraryBooks, MdAccountCircle, MdGraphicEq } from 'react-i
 
 // pages
 import Dashboard from './dashboard';
-import Post from './posts';
+import AllPost from './posts/allPosts';
+import CreatePost from './posts/createPosts';
 
 /**
  * Array format
@@ -33,9 +34,14 @@ const routes = [
         icon: <MdLibraryBooks className="icon" />,
         children: [
             {
-                title: 'Create Posts',
+                title: 'All Posts',
                 path: '/admin/posts',
-                component: Post
+                component: AllPost
+            },
+            {
+                title: 'Add New',
+                path: '/admin/posts-new',
+                component: CreatePost
             }
         ]
     },
