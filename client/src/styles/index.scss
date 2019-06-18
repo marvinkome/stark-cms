@@ -35,6 +35,7 @@
     --br-5px: 5px;
     --br-10px: 10px;
     --br-50pc: 50%;
+    --br-50px: 50px;
     --br-tl-tr: 40px 40px 0px 0px;
 
     /* Button Styles */
@@ -67,11 +68,42 @@ body {
     color: #111;
     position: relative;
     line-height: 2;
+    letter-spacing: 1px;
     font-weight: 400;
     overflow-x: hidden;
     font-size: calc(14px + 0.25vw);
 }
 
+.btn {
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    transition: 0.8;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    opacity: 0.5;
+    border-radius: var(--br-50px);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
 }

@@ -6,7 +6,9 @@
     box-shadow: var(--sideBar-shadow);
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    position: relative;
+    z-index: 2;
+    // overflow: scroll;
     // justify-content: center;
     // padding: var(--padding-l-r);
     // align-items: center;
@@ -47,6 +49,8 @@
             padding-left: 3.6rem;
             background-color: #f6f5f5;
             font-size: 16px;
+            padding-top: var(--padding-1em);
+            padding-bottom: var(--padding-1em);
 
             &.active {
                 font-weight: 500;
