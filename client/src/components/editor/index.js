@@ -1,26 +1,20 @@
 import React from 'react';
-import EditorJS from '@editorjs/editorjs';
+import ReactQuill from 'react-quill';
 
-import header from '@editorjs/header';
-import list from '@editorjs/list';
-import image from '@editorjs/image';
+import 'react-quill/dist/quill.snow.css';
 
 export default class Editor extends React.Component {
-    holder = React.createRef();
+    state = {
+        content: ''
+    };
 
-    componentDidMount() {
-        this.editor = new EditorJS({
-            holder: 'stark_editor',
-            placeholder: 'Let\'s write an awesome post!',
-            tools: {
-                header,
-                list,
-                image
-            }
-        });
-    }
+    handleChange = (content) => {
+        this.setState({ content });
+    };
 
     render() {
-        return <div className={this.props.className} id="stark_editor" />;
+        return (
+            <ReactQuill value={this.state.content} onChange={this.handleChange} {...this.props} />
+        );
     }
 }

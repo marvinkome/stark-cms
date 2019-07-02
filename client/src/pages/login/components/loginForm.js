@@ -28,10 +28,10 @@ export default class LoginForm extends Component {
                     </label>
                     <input className="--input" type="password" id="password" required />
 
-                    {/* <label className="checkbox--container">
-                        <p className="checkbox--container--title">Remember me</p>
-                        <input className="--checkbox" type="checkbox" />
-                        <span className="custom--checkmark" />
+                    {/* <label className="checkbox-container">
+                        <p className="checkbox-title">Remember me</p>
+                        <input className="checkbox" type="checkbox" />
+                        <span className="checkmark" />
                     </label> */}
 
                     <div className="center--wrapper">

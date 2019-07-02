@@ -14,7 +14,11 @@ export default class PostEditor extends React.Component {
 
                 <div className="editor-container">
                     <input type="text" placeholder="Add Title" className="form-input" />
-                    <Editor className="main-editor" />
+                    <div className="main-editor">
+                        <Editor bounds=".main-editor" placeholder="Start Writing">
+                            <div className="editing-area" />
+                        </Editor>
+                    </div>
                 </div>
             </div>
         );

@@ -1,6 +1,13 @@
 @import './LoginFormStyles/loginForm';
+
+// components
 @import './components/buttons';
+@import './components/checkbox.scss';
+@import './components/form.scss';
 @import './components/input.scss';
+
+// utils
+@import './utits.scss';
 @import './reset';
 
 ul {
