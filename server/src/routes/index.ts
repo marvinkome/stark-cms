@@ -2,8 +2,8 @@ import { Router } from 'express';
 import jwt from 'jsonwebtoken';
 import passport from 'passport';
 
-import User, { IUser } from '../models/users';
-import auth from '../libs/auth';
+import User, { IUser } from '@models/users';
+import auth from '@libs/auth';
 
 const router = Router();
 

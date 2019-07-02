@@ -31,14 +31,14 @@
         cursor: pointer;
         width: 100%;
         user-select: none;
-        padding: 12px 15%;
+        padding: 12px 10%;
         padding-right: 1%;
         font-size: 17px;
         font-weight: bold;
         color: var(--dark-secondary);
 
         &.active {
-            padding: 10px 15%;
+            padding: 10px 10%;
             background: var(--primary-color);
             color: #fff;
         }
@@ -49,8 +49,6 @@
             padding-left: 3.6rem;
             background-color: #f6f5f5;
             font-size: 16px;
-            padding-top: var(--padding-1em);
-            padding-bottom: var(--padding-1em);
 
             &.active {
                 font-weight: 500;

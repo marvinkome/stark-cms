@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import createApp from './src';
 
+require('module-alias/register');
+
 const { app, apolloServer } = createApp();
 const port = process.env.PORT || 5000;
 
