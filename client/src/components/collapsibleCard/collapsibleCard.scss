@@ -1,19 +1,20 @@
 .collapsible-card {
-    background: #ffffff;
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    background: var(--night-grey-dark);
+    box-shadow: var(--card-shadow);
     margin: 20px 0px;
+    border-radius: var(--br-tl-tr);
 
     .header {
         display: flex;
         justify-content: space-between;
-        border-radius: 5px 5px 0px 0px;
-        background: var(--secondary-color);
-        color: #fff;
-        padding: 5px 15px;
+        border-radius: var(--br-tl-tr);
+        background: var(--darker-blue);
+        color: var(--semi-white);
+        padding: 15px 20px;
         cursor: pointer;
 
         h4 {
-            font-size: 16px;
+            font-size: var(--normal-text);
         }
 
         .collapse-control {
@@ -23,7 +24,7 @@
     }
 
     .body {
-        padding: 10px 15px;
+        padding: var(--X-Y-padding);
 
         &.collapsed {
             display: none;

@@ -32,7 +32,7 @@ a {
     justify-content: center;
 }
 
-// ***  Dashboard Layout *** //
+// Dashboard Layout
 .db__container {
     display: grid;
     grid-template-columns: 240px 1fr;
@@ -51,12 +51,15 @@ a {
 
     .db__main {
         grid-area: main;
-        padding: 32px 24px;
+        padding: var(--X-Y-padding);
+        width: var(--width-100);
         overflow-y: scroll;
-        background: #f9f9f9;
+        background: var(--bg-color);
+    }
 
-        .page__name {
-            font-size: 24px;
-        }
+    .page__name {
+        font-size: var(--heading-2-42px);
+        color: var(--semi-white);
+        font-weight: var(--weight-light);
     }
 }

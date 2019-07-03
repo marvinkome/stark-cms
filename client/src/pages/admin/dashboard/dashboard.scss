@@ -1,26 +1,32 @@
 @import 'styles/_reset.scss';
 
-.db__dashboard {
+.db__home {
     margin: 15px 25px;
 
     @include for-phone-only {
         margin: 5px 10px;
     }
 
-    .welcome-card {
-        position: relative;
-        padding: 24px;
-        background: #ffffff;
-        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
-        border-radius: 5px 5px 0px 0px;
-        margin-top: 15px;
+    .home--cards {
+        background: var(--night-grey-dark);
+        box-shadow: var(--card-shadow);
+    }
 
-        .title {
-            font-size: 20px;
+    .welcome--card {
+        position: relative;
+        padding: var(--X-Y-padding);
+        border-radius: var(--br-20px);
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: var(--responsive-grid-1cols);
+        width: 100%;
+
+        .welcome--title {
+            font-size: var(--heading-4-24px);
         }
 
         p {
-            font-size: 15px;
+            font-size: var(--meduim-text-20px);
             color: var(--text-color);
         }
 
@@ -29,7 +35,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            margin: 10px 15px;
+            margin: var(--X-Y-padding);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -61,7 +67,7 @@
             }
 
             .glance {
-                font-size: 15px;
+                font-size: var(--normal-text);
 
                 a {
                     display: block;
@@ -73,8 +79,8 @@
             }
 
             .activity {
-                padding: 7px 0px;
-                border-bottom: 1px solid hsl(0, 0%, 95%);
+                padding: 20px 0px;
+                border-bottom: 1px solid #171c28;
 
                 p {
                     color: var(--text-color);
@@ -88,6 +94,12 @@
                             margin-left: 10px;
                         }
                     }
+                }
+
+                .activity--h5 {
+                    color: var(--light-cyan);
+                    font-weight: var(--weight-normal);
+                    letter-spacing: 2px;
                 }
 
                 &.comment {
@@ -133,22 +145,33 @@
                 input,
                 textarea {
                     width: 100%;
-                    font-size: 15px;
-                    padding: 7px;
+                    font-size: var(--normal-text);
+                    padding: var(--X-Y-padding);
                     margin: 10px 0px;
-                    border: 1px solid var(--primary-color);
-                    border-radius: 1px;
+                    border: none;
+                    border-radius: var(--br-10px);
+                    background: var(--bg-color);
+                    color: var(--semi-white);
+                    opacity: 0.8;
 
                     &:focus {
                         outline: none;
-                        border-width: 2px;
+                        box-shadow: var(--btn-shadow);
+                        opacity: 1;
+                    }
+
+                    &::placeholder {
+                        color: var(--semi-white);
+                        opacity: 0.8;
                     }
                 }
 
-                .btn {
-                    padding: 10px 20px;
-                    font-size: 15px;
-                    background: var(--secondary-color);
+                input {
+                    height: 50px;
+                }
+
+                textarea {
+                    height: 348px;
                 }
             }
         }

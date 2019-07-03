@@ -54,7 +54,7 @@ export default class PostAside extends React.Component {
                 <div className="aside-box">
                     <form onSubmit={this.onAddTag} className="form-container">
                         <input id="tagInput" placeholder="Add tags" />
-                        <button className="btn primary--btn">Add</button>
+                        <button className="btn secondary--btn">Add</button>
                         <p className="small">
                             <i>Seperate tags in commas</i>
                         </p>

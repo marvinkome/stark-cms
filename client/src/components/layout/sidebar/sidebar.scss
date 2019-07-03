@@ -2,7 +2,7 @@
 
 .db__sidebar {
     grid-area: sidebar;
-    background: #ffffff;
+    background: var(--darker-blue);
     box-shadow: var(--sideBar-shadow);
     display: flex;
     flex-direction: column;
@@ -29,30 +29,29 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        width: 100%;
+        width: var(--width-100);
         user-select: none;
         padding: 12px 10%;
         padding-right: 1%;
-        font-size: 17px;
-        font-weight: bold;
-        color: var(--dark-secondary);
+        font-size: var(--normal-text);
+        font-weight: var(--weight-bold);
+        color: var(--text-color);
 
         &.active {
             padding: 10px 10%;
-            background: var(--primary-color);
+            background: var(--teal-green);
             color: #fff;
         }
 
         & ~ .item a {
             display: block;
-            padding: 4px;
-            padding-left: 3.6rem;
-            background-color: #f6f5f5;
-            font-size: 16px;
+            padding: var(--padding-1em) 0 var(--padding-1em) 3.6rem;
+            background-color: var(--night-grey);
+            font-size: var(--normal-text);
 
             &.active {
-                font-weight: 500;
-                color: var(--dark-secondary);
+                font-weight: var(--weight-normal);
+                color: var(--semi-white);
             }
         }
     }

@@ -9,16 +9,19 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="db__dashboard">
+                <div className="db__home">
                     <h1 className="page__name">Dashboard</h1>
 
-                    <div className="welcome-card">
-                        <h2 className="title">Welcome to Test Site</h2>
-                        <p>
-                            This is your website dashboard from stark cms, create a post to start
-                            publishing, lorem ipsuim dolor sit ammet conscetur lorem ipsuim dolor
-                            sit ammet conscetur lorem ipsuim dolor sit ammet conscetur.
-                        </p>
+                    <div className="welcome--card home--cards">
+                        <div>
+                            <h2 className="welcome--title">Welcome to Test Site</h2>
+                            <p>
+                                This is your website dashboard from stark cms, create a post to
+                                start publishing, lorem ipsuim dolor sit ammet conscetur lorem
+                                ipsuim dolor sit ammet conscetur lorem ipsuim dolor sit ammet
+                                conscetur.
+                            </p>
+                        </div>
 
                         <div className="close-icon">
                             <MdClose className="icon" />
@@ -37,7 +40,7 @@ export default class Dashboard extends React.Component {
 
                             <CollapsibleCard title="Activity">
                                 <div className="post activity">
-                                    <h5>Recently Published</h5>
+                                    <h5 className="activity--h5">Recently Published</h5>
                                     <p>
                                         Jun 6th, 8:35am
                                         <a href="/">Hello World</a>
@@ -49,7 +52,7 @@ export default class Dashboard extends React.Component {
                                 </div>
 
                                 <div className="comment activity">
-                                    <h5>Recently Comments</h5>
+                                    <h5 className="activity--h5">Recent Comments</h5>
                                     <div>
                                         <p className="comment_author">
                                             From username on Hello World
@@ -70,7 +73,7 @@ export default class Dashboard extends React.Component {
                                 <div className="draft">
                                     <form>
                                         <div className="form-group">
-                                            <input id="title" type="text" placeholder="Title" />
+                                            <input id="title" type="text" placeholder="Title" autoComplete="false" />
                                         </div>
 
                                         <div className="form-group">

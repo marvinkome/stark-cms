@@ -6,17 +6,17 @@ export default class PostEditor extends React.Component {
         return (
             <div className="post_editor">
                 {/* topbar */}
-                <div className="editor_topbar">
+                {/* <div className="editor_topbar">
                     <button className="btn btn--preview">Preview</button>
                     <button className="btn btn--publish">Publish</button>
                     <button className="btn btn--draft">Save to Draft</button>
-                </div>
+                </div> */}
 
                 <div className="editor-container">
-                    <input type="text" placeholder="Add Title" className="form-input" />
+                    <input type="text" placeholder="Add Title" className="form-input form-inputs" />
                     <div className="main-editor">
                         <Editor bounds=".main-editor" placeholder="Start Writing">
-                            <div className="editing-area" />
+                            <div className="editing-area form-inputs" />
                         </Editor>
                     </div>
                 </div>
