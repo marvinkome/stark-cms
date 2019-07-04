@@ -7,6 +7,8 @@ import { MdAvTimer, MdLibraryBooks, MdAccountCircle, MdGraphicEq } from 'react-i
 import Dashboard from './dashboard';
 import AllPost from './posts/allPosts';
 import CreatePost from './posts/createPosts';
+import UserProfile from './users/userProfile';
+import AddUsers from './users/addUser';
 
 /**
  * Array format
@@ -50,9 +52,14 @@ const routes = [
         icon: <MdAccountCircle className="icon" />,
         children: [
             {
-                title: 'Admin',
-                path: '/admin/users',
-                component: Dashboard
+                title: 'Your Profile',
+                path: '/admin/profile',
+                component: UserProfile
+            },
+            {
+                title: 'Add new',
+                path: '/admin/add_users',
+                component: AddUsers
             }
         ]
     },

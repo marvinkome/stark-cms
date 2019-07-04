@@ -53,6 +53,15 @@ body {
     background: var(--forest-teal);
 }
 
+.avatar {
+    border-radius: var(--br-50pc);
+    object-fit: cover;
+}
+.avatar--150 {
+    width: 150px;
+    height: 150px;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
