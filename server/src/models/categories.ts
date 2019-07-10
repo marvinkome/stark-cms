@@ -23,4 +23,4 @@ const categoriesSchema = new Schema({
     }
 });
 
-export default model('Category', categoriesSchema);
+export default model<ICategories>('Category', categoriesSchema);
