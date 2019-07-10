@@ -36,9 +36,9 @@
         "typescript": "^3.5.1"
     },
     "_moduleAliases": {
-        "@gql": "dist/gql",
-        "@libs": "dist/libs",
-        "@models": "dist/models",
-        "@routes": "dist/routes"
+        "@gql/": "dist/gql",
+        "@libs/": "dist/libs",
+        "@models/": "dist/models",
+        "@routes/": "dist/routes"
     }
 }
