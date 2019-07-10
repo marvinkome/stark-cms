@@ -73,13 +73,20 @@ export default class Dashboard extends React.Component {
                                 <div className="draft">
                                     <form>
                                         <div className="form-group">
-                                            <input id="title" type="text" placeholder="Title" autoComplete="false" />
+                                            <input
+                                                id="title"
+                                                type="text"
+                                                placeholder="Title"
+                                                autoComplete="false"
+                                                className="form-input"
+                                            />
                                         </div>
 
                                         <div className="form-group">
                                             <textarea
                                                 rows="5"
                                                 placeholder="Write an interesting post"
+                                                className="form-input"
                                             />
                                         </div>
 

@@ -1,10 +1,30 @@
-.form-container {
-    input {
-        width: 100%;
-        font-size: 15px;
-        padding: 7px;
-        margin: 10px 0px;
-        border: 1px solid var(--primary-color);
-        border-radius: 1px;
+.form-input {
+    width: 100%;
+    font-size: var(--normal-text);
+    padding: var(--X-Y-padding);
+    margin: 10px 0px;
+    border: none;
+    border-radius: var(--br-5px);
+    background: var(--bg-color);
+    color: var(--semi-white);
+    opacity: 0.8;
+
+    &:focus {
+        outline: none;
+        box-shadow: var(--btn-shadow);
+        opacity: 1;
     }
+
+    &::placeholder {
+        color: var(--semi-white);
+        opacity: 0.8;
+    }
+}
+
+input.form-input {
+    height: 50px;
+}
+
+textarea.form-input {
+    height: 300px;
 }

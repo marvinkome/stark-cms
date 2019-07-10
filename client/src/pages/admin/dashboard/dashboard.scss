@@ -140,40 +140,6 @@
 
         .second-col {
             flex: 2;
-
-            .draft {
-                input,
-                textarea {
-                    width: 100%;
-                    font-size: var(--normal-text);
-                    padding: var(--X-Y-padding);
-                    margin: 10px 0px;
-                    border: none;
-                    border-radius: var(--br-10px);
-                    background: var(--bg-color);
-                    color: var(--semi-white);
-                    opacity: 0.8;
-
-                    &:focus {
-                        outline: none;
-                        box-shadow: var(--btn-shadow);
-                        opacity: 1;
-                    }
-
-                    &::placeholder {
-                        color: var(--semi-white);
-                        opacity: 0.8;
-                    }
-                }
-
-                input {
-                    height: 50px;
-                }
-
-                textarea {
-                    height: 348px;
-                }
-            }
         }
     }
 }
