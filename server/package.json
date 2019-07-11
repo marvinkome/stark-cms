@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "build": "tsc",
-        "start": "node -r dotenv/config -r module-alias/register ./dist/index.js",
+        "start": "node -r module-alias/register -r dotenv/config  ./dist/index.js",
         "dev": "nodemon --exec ts-node -r dotenv/config -r tsconfig-paths/register index.ts"
     },
     "dependencies": {
@@ -36,9 +36,9 @@
         "typescript": "^3.5.1"
     },
     "_moduleAliases": {
-        "@gql/": "dist/src/gql",
-        "@libs/": "dist/src/libs",
-        "@models/": "dist/src/models",
-        "@routes/": "dist/src/routes"
+        "@gql": "./dist/src/gql",
+        "@libs": "./dist/src/libs",
+        "@models": "./dist/src/models",
+        "@routes": "./dist/src/routes"
     }
 }
