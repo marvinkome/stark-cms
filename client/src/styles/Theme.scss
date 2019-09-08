@@ -1,32 +1,21 @@
 :root {
     // Colors
-    --teal-green: #079992;
-    --teal-green-dark: #13847e;
-    --teal-green-darker: #04233a;
-    --forest-teal: #0a3d62;
-
-    --darker-blue: #121621;
-    --bg-color: #171c28;
-
-    --night-grey: #232937;
-    --night-grey-dark: #212534;
-    --night-grey-darker: #171c28;
-
-    --light-cyan: #1bc2e7;
-    --text-color: #98a2af;
-    --semi-white: #f1f1f1;
-    --gold-color: #fde510;
-    --blue-color: #2f80ed;
+    --bg-color: #e7ebf1;
+    --brand-color: #5352ed;
+    --color0: #f8fafd;
+    --color1: #f1f5fc;
+    --color2: #c6d0eb;
+    --color3: #6b7dae;
+    --color4: #3f4d73;
     --red-color: #d41919;
-    --purple-color: #5628ee;
-    --light-purple: #6f77d2;
+    --gold-color: #fde510;
+    --green-color: #27ae60;
+    --blue-color: #2f80ed;
+    --dark-purple: #341f97;
 
     // Gradients
-    --primary-gradient: linear-gradient(138.22deg, #5628ee 0.24%, #079992 71.49%);
 
     // Box Shadows
-    --sideBar-shadow: 3px 0px 50px rgba(0, 0, 0, 0.2);
-    --header-shadow: 0px 4px 50px rgba(0, 0, 0, 0.2);
 
     // Button Shadows
     --btn-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -83,10 +72,9 @@
     --caption-text: 18px;
     --normal-text: 1em;
     --small-text: 0.8em;
-    --montserrat-regular: 'Montserrat Regular';
-    --montserrat-light: 'Montserrat Light';
+    --montserrat-regular: 'Roboto Regular';
     --weight-normal: normal;
     --weight-bold: bold;
-    --weight-light: lighter;
+    --font-style: italic;
     --text-uppercase: uppercase;
 }

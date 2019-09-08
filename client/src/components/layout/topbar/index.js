@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-    MdLaunch,
-    MdComment,
-    MdHeadsetMic,
-    MdAccountCircle,
-    MdNotificationsNone
-} from 'react-icons/md';
+import { MdLaunch, MdHeadsetMic, MdAccountCircle, MdNotificationsNone } from 'react-icons/md';
 import './topbar.scss';
 
 export default class Topbar extends React.Component {
@@ -18,11 +12,6 @@ export default class Topbar extends React.Component {
                         <Link to="/admin" className="item">
                             <MdLaunch className="icon" />
                             Visit Site
-                        </Link>
-
-                        <Link to="/admin" className="item">
-                            <MdComment className="icon" />
-                            All Comments
                         </Link>
 
                         <Link to="/admin" className="item">

@@ -1,7 +1,14 @@
 import React from 'react';
 
 // import the icons you want to use for the route
-import { MdAvTimer, MdLibraryBooks, MdAccountCircle, MdGraphicEq } from 'react-icons/md';
+import {
+    MdEqualizer,
+    MdLibraryBooks,
+    MdLayers,
+    MdColorLens,
+    MdSpeakerNotes,
+    MdGraphicEq
+} from 'react-icons/md';
 
 // pages
 import Dashboard from './dashboard';
@@ -16,8 +23,8 @@ import AddUsers from './users/addUser';
  */
 const routes = [
     {
-        title: 'Dashboard',
-        icon: <MdAvTimer className="icon" />,
+        title: 'Overview',
+        icon: <MdEqualizer className="icon" />,
         children: [
             {
                 title: 'Home',
@@ -48,8 +55,40 @@ const routes = [
         ]
     },
     {
-        title: 'Users',
-        icon: <MdAccountCircle className="icon" />,
+        title: 'Pages',
+        icon: <MdLayers className="icon" />,
+        children: [
+            {
+                title: 'Your Profile',
+                path: '/admin/profile',
+                component: UserProfile
+            },
+            {
+                title: 'Add new',
+                path: '/admin/add_users',
+                component: AddUsers
+            }
+        ]
+    },
+    {
+        title: 'Templates',
+        icon: <MdColorLens className="icon" />,
+        children: [
+            {
+                title: 'Your Profile',
+                path: '/admin/profile',
+                component: UserProfile
+            },
+            {
+                title: 'Add new',
+                path: '/admin/add_users',
+                component: AddUsers
+            }
+        ]
+    },
+    {
+        title: 'Comments',
+        icon: <MdSpeakerNotes className="icon" />,
         children: [
             {
                 title: 'Your Profile',
