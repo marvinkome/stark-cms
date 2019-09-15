@@ -15,7 +15,7 @@ export default class LoginForm extends Component {
     render() {
         return (
             <div className="login--bg">
-                <div className="form-bg" />
+                <h2>Login</h2>
 
                 <form className="login--form" onSubmit={this.handleSubmit}>
                     <label htmlFor="identity" className="--label">
@@ -35,7 +35,7 @@ export default class LoginForm extends Component {
                     </label> */}
 
                     <div className="center--wrapper">
-                        <button className="btn btn-lg primary--btn" type="submit">
+                        <button type="submit">
                             Log In
                         </button>
 

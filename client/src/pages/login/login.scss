@@ -1,5 +1,8 @@
 .login__container {
-    margin-top: 10vh;
+    height: 100vh;
+    background: #fff;
+    overflow: visible;
+    padding-top: 5%;
 
     .container {
         display: flex;
@@ -18,6 +21,15 @@
         align-items: center;
     }
 
+    .login--bg {
+        background: #fff;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 13px;
+        padding: 2em;
+        width: 22%;
+        margin: auto;
+    }
+
     .form-bg {
         width: 100%;
         height: 500px;
@@ -33,32 +45,42 @@
     }
 
     .login--form {
-        background: #fff;
-        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        padding: 2em;
-        width: 30vw;
+        padding-top: 15px;
 
         .--label {
-            font-weight: 600;
-            color: #706e6e;
+            font-weight: 500;
+            color: var(--color3);
             font-size: 15px;
+            padding-bottom: 5px;
         }
+
         .--input {
             border: none;
-            border-bottom: 1px solid #0c2461;
             width: 100%;
-            padding: 0.5em;
-            background: transparent;
+            padding: 15px;
+            background: var(--color1);
             outline: none;
             margin-bottom: 2rem;
             font-size: 18px;
             transition: all ease-in-out 0.5s;
+            border-radius: 13px;
+            color: var(--color3);
             opacity: 1;
         }
 
         .--input:focus {
             opacity: 1;
+        }
+
+        button {
+            border: none;
+            padding: 15px 20px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            outline-color: #079992;
+            background: var(--brand-color);
+            border-radius: 5px;
         }
 
         /* The container */

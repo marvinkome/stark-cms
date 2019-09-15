@@ -28,7 +28,6 @@ class Login extends React.Component {
                     {/* logo */}
                     <span className="login--logo">
                         <img src={logo} alt="Logo" />
-                        <h3>Login to your account</h3>
                     </span>
 
                     {/* form */}
