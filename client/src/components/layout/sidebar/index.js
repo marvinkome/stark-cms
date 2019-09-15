@@ -12,8 +12,10 @@ export default class Sidebar extends React.Component {
         return (
             <div className="db__sidebar">
                 <Link className="logo" to="/admin">
-                    <img src={logo} width="150px" alt="logo" />
+                    <img src={logo} width="100px" alt="logo" />
                 </Link>
+
+                {/* <button className="btn">New Post</button> */}
 
                 {/* get all admin routes and pass to SidebarRoutes */}
                 {routes.map((route, index) => (

@@ -16,7 +16,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--blue-color);
 }
 
 .icon {
@@ -57,8 +57,8 @@ a {
     }
 
     .page__name {
-        font-size: var(--heading-2);
-        color: var(--semi-white);
-        font-weight: var(--weight-light);
+        font-size: var(--heading-1);
+        color: var(--color4);
+        font-weight: var(--weight-normal);
     }
 }
