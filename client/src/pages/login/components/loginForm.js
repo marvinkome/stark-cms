@@ -35,12 +35,10 @@ export default class LoginForm extends Component {
                     </label> */}
 
                     <div className="center--wrapper">
-                        <button type="submit">
-                            Log In
-                        </button>
+                        <button type="submit">Log In</button>
 
                         {/* TODO:: Add forget password functionality */}
-                        {/* <p>Forgot Your password?</p> */}
+                        <a href="#">Forgot password?</a>
                     </div>
                 </form>
             </div>
