@@ -40,7 +40,6 @@ a {
         'sidebar header'
         'sidebar main'
         'sidebar main';
-    height: 100vh;
 
     @include for-phone-only {
         grid-template-areas:
