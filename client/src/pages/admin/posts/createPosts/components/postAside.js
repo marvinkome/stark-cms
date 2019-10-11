@@ -7,11 +7,10 @@ export default class PostAside extends React.Component {
             <div className="post_aside">
                 <div className="publish-box">
                     <p className="status">
-                        <span className="status-icon draft" /> Status:{' '}
-                        <span className="status-text">draft</span>
+                        Status: <span className="status-text">Saved as draft</span>
                     </p>
 
-                    <button className="btn primary--btn publish-btn">Save Draft</button>
+                    <button className="btn btn-sm publish-btn">Save Draft</button>
 
                     <p className="last-saved">Last saved 8 mins ago</p>
                 </div>
@@ -24,7 +23,7 @@ export default class PostAside extends React.Component {
                             <span className="checkmark" />
                         </label>
                         <a className="add-new-link" href="/">
-                            <span>+</span> Add new category
+                            <span className="plus-icon">+</span> <span>Add new category</span>
                         </a>
                     </div>
                 </CollapsibleCard>
