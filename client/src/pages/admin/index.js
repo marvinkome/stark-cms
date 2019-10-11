@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { AUTH_TOKEN_KEY } from 'lib/keys';
-import { mainClient, authApi } from 'lib/api';
+import { ApolloProvider } from '@apollo/react-hooks';
 import { toast } from 'react-toastify';
 import { inject } from 'mobx-react';
+import { AUTH_TOKEN_KEY } from 'lib/keys';
+import { mainClient, authApi } from 'lib/api';
+import { setupApollo } from 'lib/graphql';
 
 import { routerPaths } from './routes';
 
 class Admin extends Component {
+    state = {
+        client: null
+    };
+
     async componentDidMount() {
         const auth_message = 'Authentication key not found. Redirecting to login';
         try {
@@ -18,8 +24,13 @@ class Admin extends Component {
                 throw Error(auth_message);
             }
 
+            // setup apollo client
+            const { client } = setupApollo(token);
+            this.setState({ client });
+
             // add token to api instance
             mainClient.setAccessToken(token);
+            setupApollo(token);
 
             // fetch profile
             const { data } = await authApi.userProfile();
@@ -38,15 +49,26 @@ class Admin extends Component {
     }
 
     render() {
+        const { client } = this.state;
+
         return (
-            <div>
-                <Switch>
-                    {routerPaths.map((routes, index) => (
-                        <Route key={index} exact path={routes.path} component={routes.component} />
-                    ))}
-                    <Route path="*" render={() => <p>404 page</p>} />
-                </Switch>
-            </div>
+            client && (
+                <div>
+                    <ApolloProvider client={client}>
+                        <Switch>
+                            {routerPaths.map((routes, index) => (
+                                <Route
+                                    key={index}
+                                    exact
+                                    path={routes.path}
+                                    component={routes.component}
+                                />
+                            ))}
+                            <Route path="*" render={() => <p>404 page</p>} />
+                        </Switch>
+                    </ApolloProvider>
+                </div>
+            )
         );
     }
 }
