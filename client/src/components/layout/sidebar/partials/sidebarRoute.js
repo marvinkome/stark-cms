@@ -34,14 +34,16 @@ class SidebarRoute extends React.Component {
             return true;
         }
 
-        return this.state.showingChildren;
+        // return this.state.showingChildren;
+        return false;
     };
 
     renderChilren = (items) => {
         return items.map((item, index) => {
             const active = item.path === this.props.match.path;
+            const firstChild = index === 0;
             return (
-                <div className="item" key={index}>
+                <div className={classnames('item', { firstChild })} key={index}>
                     <Link className={classnames({ active })} to={item.path}>
                         {item.icon}
                         {item.title}
@@ -56,7 +58,7 @@ class SidebarRoute extends React.Component {
         const active = this.isActive();
 
         return (
-            <div>
+            <div className="sidebar-item">
                 {item.path ? (
                     <Link className={classnames('sidebar__title', { active })} to={item.path}>
                         {item.icon}

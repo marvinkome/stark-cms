@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from 'components/layout';
 // import CollapsibleCard from 'components/collapsibleCard';
 import chart from '../../../images/Chart.png';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdTimeline, MdCreate, MdComment, MdKeyboardArrowDown } from 'react-icons/md';
 
 import './dashboard.scss';
 
@@ -31,31 +31,60 @@ export default class Dashboard extends React.Component {
 
                     <div className="stats--card">
                         <h3>Stats</h3>
-                        <div className="stats--first-column">
+
+                        <div className="stats--first-row">
                             <div className="stats--cards">
-                                <span />
-                                <p>Views today</p>
-                                <p>1,500</p>
+                                <div className="icon-container">
+                                    <MdTimeline className="icon" />
+                                </div>
+
+                                <div>
+                                    <p>Views today</p>
+                                    <p className="stats">1,500</p>
+                                </div>
                             </div>
                             <div className="stats--cards">
-                                <span />
-                                <p>Posts</p>
-                                <p>500</p>
+                                <div className="icon-container">
+                                    <MdCreate className="icon" />
+                                </div>
+
+                                <div>
+                                    <p>Posts</p>
+                                    <p className="stats">50</p>
+                                </div>
                             </div>
                             <div className="stats--cards">
-                                <span />
-                                <p>Pages</p>
-                                <p>5</p>
+                                <div className="icon-container">
+                                    <MdComment className="icon" />
+                                </div>
+
+                                <div>
+                                    <p>Comments</p>
+                                    <p className="stats">2,553</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="stats--data">
-                            <h3>Monthly Visitors</h3> <span />
-                            <div>
-                                <img src={chart} alt="Chart" />
+                        <div className="stats--second-row">
+                            <div className="stats--data">
+                                <h4>
+                                    Monthly Visitors{' '}
+                                    <span>
+                                        <MdKeyboardArrowDown className="icon" />
+                                    </span>
+                                </h4>
+
+                                <div>
+                                    <img src={chart} alt="Chart" />
+                                </div>
+                            </div>
+
+                            <div className="stats--comments">
+                                <h4>
+                                    Recent Comments <span>34</span>
+                                </h4>
                             </div>
                         </div>
-                        <div className="comments" />
                     </div>
                 </div>
             </Layout>
