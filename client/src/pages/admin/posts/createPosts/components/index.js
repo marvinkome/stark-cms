@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from 'components/layout';
+import { errorHandler, redirectWithFlash } from 'lib/helpers';
 
 import Editor from './editor';
 import Aside from './postAside';
@@ -16,8 +17,22 @@ export default class CreatePostView extends React.Component {
         this.setState({ [key]: value });
     };
 
-    onSave = (saveType) => {
-        return this.props.addPost({ variables: { ...this.state, status: saveType } });
+    onSave = async (saveType) => {
+        try {
+            await this.props.addPost({
+                variables: { ...this.state, status: saveType }
+            });
+
+            // redirect back to post list with flash message
+            // TODO:: Redirect to edit page
+            redirectWithFlash(
+                '/admin/posts',
+                saveType === 'draft' ? 'Post draft saved' : 'Post published',
+                'success'
+            );
+        } catch (e) {
+            errorHandler('Error creating posts', e);
+        }
     };
 
     render() {

@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify';
+import history from './history';
 
 export function errorHandler(message, error) {
     if (process.env.NODE_ENV !== 'production') {
@@ -9,7 +10,7 @@ export function errorHandler(message, error) {
     toast.error(message);
 }
 
-export function redirectWithFlash(history, path, message, type = 'info', state = {}) {
+export function redirectWithFlash(path, message, type = 'info', state = {}) {
     return history.push(path, {
         flashMessage: message,
         flashType: type,
