@@ -1,0 +1,22 @@
+.alert-box {
+    background: var(--color0);
+    padding: 10px 15px;
+    margin: 10px 0px;
+    border-left: 3px solid;
+
+    &.success {
+        border-color: #43a047;
+    }
+
+    &.warning {
+        border-color: #ffb300;
+    }
+
+    &.info {
+        border-color: #03a9f4;
+    }
+
+    &.error {
+        border-color: #f44336;
+    }
+}

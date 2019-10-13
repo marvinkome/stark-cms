@@ -32,26 +32,6 @@ body {
     font-size: calc(14px + 0.25vw);
 }
 
-.btn {
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: var(--btn-shadow);
-    transition: ease-in-out 0.5s;
-
-    &:hover {
-        box-shadow: var(--btn-hover-shadow);
-    }
-}
-
-.primary--btn {
-    background: var(--primary-gradient);
-}
-
-.secondary--btn {
-    background: var(--forest-teal);
-}
-
 .avatar {
     border-radius: var(--br-50pc);
     object-fit: cover;

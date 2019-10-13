@@ -1,7 +1,8 @@
 import React from 'react';
 import { Provider } from 'mobx-react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import history from 'lib/history';
 
 // styles
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,7 +21,7 @@ export default class App extends React.Component {
     render() {
         return (
             <Provider rootStore={store}>
-                <BrowserRouter>
+                <Router history={history}>
                     <div className="App">
                         <Switch>
                             <Route path="/login" component={Login} />
@@ -31,7 +32,7 @@ export default class App extends React.Component {
                         <Loader />
                         <ToastContainer />
                     </div>
-                </BrowserRouter>
+                </Router>
             </Provider>
         );
     }
