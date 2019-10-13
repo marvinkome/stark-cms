@@ -8,3 +8,11 @@ export function errorHandler(message, error) {
 
     toast.error(message);
 }
+
+export function redirectWithFlash(history, path, message, type = 'info', state = {}) {
+    return history.push(path, {
+        flashMessage: message,
+        flashType: type,
+        ...state
+    });
+}

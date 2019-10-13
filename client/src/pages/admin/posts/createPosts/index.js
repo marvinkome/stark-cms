@@ -1,11 +1,10 @@
 import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
-import { errorHandler } from 'lib/helpers';
+import { errorHandler, redirectWithFlash } from 'lib/helpers';
 import { ADD_POST } from './gql';
 import CreatePostView from './components';
-import { toast } from 'react-toastify';
 
-export default function CreatePosts() {
+export default function CreatePosts(props) {
     const [addPostFn, { error, data }] = useMutation(ADD_POST);
 
     if (error) {
@@ -13,7 +12,7 @@ export default function CreatePosts() {
     }
 
     if (data) {
-        toast.success('Post created. Redirecting to post page');
+        redirectWithFlash(props.history, '/admin/posts', 'Draft saved', 'success');
     }
 
     return <CreatePostView addPost={addPostFn} />;
