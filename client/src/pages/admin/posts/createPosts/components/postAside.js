@@ -1,5 +1,5 @@
 import React from 'react';
-import CollapsibleCard from 'components/collapsibleCard';
+// import CollapsibleCard from 'components/collapsibleCard';
 
 export default class PostAside extends React.Component {
     render() {
@@ -10,12 +10,26 @@ export default class PostAside extends React.Component {
                         Status: <span className="status-text">Saved as draft</span>
                     </p>
 
-                    <button className="btn btn-sm publish-btn">Save Draft</button>
+                    <div className="action-btns">
+                        <button
+                            onClick={() => this.props.onSave('publish')}
+                            className="publish-btn btn"
+                        >
+                            Publish
+                        </button>
+
+                        <button
+                            onClick={() => this.props.onSave('draft')}
+                            className="draft-btn btn-outline btn"
+                        >
+                            Save Draft
+                        </button>
+                    </div>
 
                     <p className="last-saved">Last saved 8 mins ago</p>
                 </div>
 
-                <CollapsibleCard title="Categories">
+                {/* <CollapsibleCard title="Categories">
                     <div className="aside-box">
                         <label className="checkbox-container outline">
                             <p className="checkbox-title">Uncategorized</p>
@@ -26,7 +40,7 @@ export default class PostAside extends React.Component {
                             <span className="plus-icon">+</span> <span>Add new category</span>
                         </a>
                     </div>
-                </CollapsibleCard>
+                </CollapsibleCard> */}
             </div>
         );
     }

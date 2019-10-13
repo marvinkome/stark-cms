@@ -1,24 +1,20 @@
 import React from 'react';
-import Layout from 'components/layout';
+import { useMutation } from '@apollo/react-hooks';
+import { errorHandler } from 'lib/helpers';
+import { ADD_POST } from './gql';
+import CreatePostView from './components';
+import { toast } from 'react-toastify';
 
-import Editor from './components/editor';
-import Aside from './components/postAside';
+export default function CreatePosts() {
+    const [addPostFn, { error, data }] = useMutation(ADD_POST);
 
-import './create_posts.scss';
-
-export default class CreatePosts extends React.Component {
-    render() {
-        return (
-            <Layout>
-                <div className="db_create_posts">
-                    <h1 className="page__name">Create New Post</h1>
-
-                    <div className="create_posts_container">
-                        <Editor />
-                        <Aside />
-                    </div>
-                </div>
-            </Layout>
-        );
+    if (error) {
+        errorHandler('Error creating posts', error);
     }
+
+    if (data) {
+        toast.success('Post created. Redirecting to post page');
+    }
+
+    return <CreatePostView addPost={addPostFn} />;
 }
