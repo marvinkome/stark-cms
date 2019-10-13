@@ -1,5 +1,5 @@
 .collapsible-card {
-    background: var(--night-grey-dark);
+    background: var(--color0);
     box-shadow: var(--card-shadow);
     margin: 20px 0px;
     border-radius: var(--br-tl-tr);
@@ -8,7 +8,6 @@
         display: flex;
         justify-content: space-between;
         border-radius: var(--br-tl-tr);
-        background: var(--darker-blue);
         color: var(--semi-white);
         padding: 15px 20px;
         cursor: pointer;

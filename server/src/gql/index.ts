@@ -7,14 +7,16 @@ import { queryType, queryResolver } from './queries';
 import { mutationType, mutationResolvers } from './mutation';
 import { userType, userResolvers } from './queries/users';
 import { categoriesType, categoriesResolvers } from './queries/categories';
+import { postsType, postsResolvers } from './queries/posts';
 
 const schema = makeExecutableSchema({
-    typeDefs: [queryType, mutationType, userType, categoriesType],
+    typeDefs: [queryType, mutationType, userType, categoriesType, postsType],
     resolvers: [
         queryResolver,
         mutationResolvers,
         userResolvers,
-        categoriesResolvers
+        categoriesResolvers,
+        postsResolvers
     ]
 });
 

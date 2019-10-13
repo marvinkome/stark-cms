@@ -1,6 +1,6 @@
 .btn {
     border: none;
-    padding: 15px 3em;
+    padding: 9px 15px;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -9,8 +9,10 @@
     border-radius: 5px;
 }
 
-.btn-sm {
-    padding: 9px 15px;
+.btn-outline {
+    border: 1px solid var(--brand-color);
+    background: none;
+    color: var(--brand-color);
 }
 
 .btn-lg {

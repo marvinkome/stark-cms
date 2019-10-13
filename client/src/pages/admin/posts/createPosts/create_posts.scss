@@ -1,31 +1,26 @@
 @import 'styles/_reset.scss';
 
 .db_create_posts {
-    margin: 15px 20px;
+    margin: 0px;
 
     .create_posts_container {
         display: flex;
-        // display: grid;
-        // grid-gap: 2em;
-        // grid-template-columns: var(--responsive-grid-1cols);
+        padding: 32px 0px;
     }
 
     .post_editor {
         flex: 2;
         margin-right: 20px;
-        // width: 100%;
-        // grid-column: 1 / span 2;
 
         .editor-container {
             .form-input {
-                background: var(--darker-blue);
+                background: var(--color0);
                 padding: 1.5em 0 1.5em 1.5em;
                 border-radius: 0px;
                 color: var(--semi-white);
                 opacity: 0.8;
                 height: 50px;
-                border-left: 1px solid var(--light-cyan);
-                font-size: var(--heading-4);
+                font-size: var(--meduim-text);
 
                 &:focus {
                     box-shadow: var(--card-shadow);
@@ -36,52 +31,54 @@
                 color: var(--semi-white);
             }
 
-            .editing-area {
-                height: 300px;
-                margin-top: 1em;
-                font-size: var(--normal-text);
+            .main-editor {
+                .ql-container.ql-snow {
+                    border-left: 1px solid var(--light-cyan) !important;
+                    border: none;
+                    margin-top: 0;
+                    height: 300px;
+                    background: var(--color0);
+                    font-size: var(--body-text);
+                    opacity: 0.8;
+                    padding: 1em 0.5em;
 
-                ::-webkit-scrollbar {
-                    width: 10px;
-                    transition: 0.8;
+                    ::-webkit-scrollbar {
+                        width: 10px;
+                        transition: 0.8;
+                    }
+
+                    /* Track */
+                    ::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+
+                    /* Handle */
+                    ::-webkit-scrollbar-thumb {
+                        background: rgba(101, 113, 116, 0.31);
+                        opacity: 0.5;
+                        border-radius: var(--br-50px);
+                    }
+
+                    /* Handle on hover */
+                    ::-webkit-scrollbar-thumb:hover {
+                        background: var(--night-grey-dark);
+                    }
                 }
 
-                /* Track */
-                ::-webkit-scrollbar-track {
-                    background: transparent;
+                .ql-toolbar.ql-snow {
+                    border: none;
+                    border-radius: 5px;
+                    background: #f1f5fc;
+                    padding: 8px;
                 }
 
-                /* Handle */
-                ::-webkit-scrollbar-thumb {
-                    background: rgba(101, 113, 116, 0.31);
-                    opacity: 0.5;
-                    border-radius: var(--br-50px);
+                .ql-editor.ql-blank::before {
+                    color: inherit;
+                    content: attr(data-placeholder);
+                    font-style: italic;
+                    pointer-events: none;
+                    // position: absolute;
                 }
-
-                /* Handle on hover */
-                ::-webkit-scrollbar-thumb:hover {
-                    background: var(--night-grey-dark);
-                }
-            }
-
-            .ql-container.ql-snow {
-                border-left: 1px solid var(--light-cyan) !important;
-                border: none;
-            }
-
-            .ql-toolbar.ql-snow {
-                border: none;
-                border-radius: 5px;
-                background: var(--light-cyan);
-                padding: 8px;
-            }
-
-            .ql-editor.ql-blank::before {
-                color: inherit;
-                content: attr(data-placeholder);
-                font-style: italic;
-                pointer-events: none;
-                // position: absolute;
             }
         }
     }
@@ -92,9 +89,8 @@
 
         .publish-box {
             margin-bottom: 2em;
-            box-shadow: var(--card-shadow);
             padding: var(--X-Y-padding);
-            background: var(--darker-blue);
+            background: var(--color0);
 
             .status {
                 .status-icon {
@@ -113,18 +109,24 @@
                 }
 
                 .status-text {
-                    margin-left: 10px;
                     font-size: var(--small-text);
                     color: var(--blue-color);
                 }
             }
 
-            .publish-btn {
-                margin-top: 15px;
+            .action-btns {
+                display: flex;
+                justify-content: space-between;
+                width: 65%;
+
+                .btn {
+                    margin-top: 15px;
+                    text-align: center;
+                }
             }
 
             .last-saved {
-                margin-top: 10px;
+                margin-top: 18px;
                 font-weight: bold;
                 font-size: var(--small-text);
             }
@@ -132,23 +134,22 @@
 
         .collapsible-card {
             border-radius: 0;
-
-            .header {
-                background: var(--night-grey-dark);
-            }
+            box-shadow: none;
 
             .body {
                 margin-bottom: 2em;
-                box-shadow: var(--card-shadow);
                 padding: var(--X-Y-padding);
-                background: var(--darker-blue);
 
                 .add-new-link {
                     font-size: var(--small-text);
 
                     span {
-                        font-size: 20px;
-                        color: var(--teal-green-dark);
+                        vertical-align: middle;
+
+                        &.plus-icon {
+                            font-size: 20px;
+                            margin-right: 3px;
+                        }
                     }
                 }
             }

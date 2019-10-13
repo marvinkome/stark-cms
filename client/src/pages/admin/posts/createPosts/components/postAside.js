@@ -1,5 +1,5 @@
 import React from 'react';
-import CollapsibleCard from 'components/collapsibleCard';
+// import CollapsibleCard from 'components/collapsibleCard';
 
 export default class PostAside extends React.Component {
     render() {
@@ -7,16 +7,29 @@ export default class PostAside extends React.Component {
             <div className="post_aside">
                 <div className="publish-box">
                     <p className="status">
-                        <span className="status-icon draft" /> Status:{' '}
-                        <span className="status-text">draft</span>
+                        Status: <span className="status-text">Saved as draft</span>
                     </p>
 
-                    <button className="btn primary--btn publish-btn">Save Draft</button>
+                    <div className="action-btns">
+                        <button
+                            onClick={() => this.props.onSave('publish')}
+                            className="publish-btn btn"
+                        >
+                            Publish
+                        </button>
+
+                        <button
+                            onClick={() => this.props.onSave('draft')}
+                            className="draft-btn btn-outline btn"
+                        >
+                            Save Draft
+                        </button>
+                    </div>
 
                     <p className="last-saved">Last saved 8 mins ago</p>
                 </div>
 
-                <CollapsibleCard title="Categories">
+                {/* <CollapsibleCard title="Categories">
                     <div className="aside-box">
                         <label className="checkbox-container outline">
                             <p className="checkbox-title">Uncategorized</p>
@@ -24,10 +37,10 @@ export default class PostAside extends React.Component {
                             <span className="checkmark" />
                         </label>
                         <a className="add-new-link" href="/">
-                            <span>+</span> Add new category
+                            <span className="plus-icon">+</span> <span>Add new category</span>
                         </a>
                     </div>
-                </CollapsibleCard>
+                </CollapsibleCard> */}
             </div>
         );
     }
