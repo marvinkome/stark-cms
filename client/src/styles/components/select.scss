@@ -1,0 +1,18 @@
+.select {
+    width: 150px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    font-size: var(--body-text);
+    border-radius: 0px;
+    padding: 5px;
+    color: var(--color4);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA20lEQVQ4T+3SL0tDcRjF8c8V2YrJqHF1VTAIK5rtewGCb2BNWBIcmKy+gYW9ATGJIPblwZLNZBqMyQ9+Vy4/7j/wxj31Oc8XzjlPpuPJOubZA/+faJphDxPMsGnA96P2oahNgUd4xRpjbCugh5jjFJf4yXVlLR/jDR+4wS6BHuAZZxjhu7ivepsTvGMRbeXQoH/ENS7wlTqo+8NBhD7hPh7e4TbCVmVxND32MNoPoGB1Gm0uqwprAoa7c7xEwBU+69pvAwz3ockw4QNqpy2wifO33wNbR1Up7DzDX2zcHRV0yPnBAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
