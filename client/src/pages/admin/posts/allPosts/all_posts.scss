@@ -1,0 +1,46 @@
+.db_all_posts {
+    .page-header {
+        display: flex;
+
+        & h2 {
+            margin-right: auto;
+        }
+
+        .nav--lists {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav--form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav--search {
+                padding: 10px;
+                font-size: 16px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #cccccc;
+                outline: none;
+                transition: 0.5s ease-in-out;
+
+                &::placeholder {
+                    position: relative;
+                    right: -0.5em;
+                }
+
+                &:focus {
+                    border-bottom-color: #555555;
+                }
+            }
+
+            .search--icon {
+                position: relative;
+                right: -1em;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
